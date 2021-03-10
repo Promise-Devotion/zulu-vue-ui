@@ -1,10 +1,15 @@
 <template>
+  <top-nav />
   <router-view></router-view>
 </template>
 
 <script>
+import TopNav from '../src/components/TopNav.vue'
 
 export default {
-  name: 'App'
+  name: 'App',
+  components: {
+    TopNav
+  },
 }
 </script>
