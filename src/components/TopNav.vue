@@ -18,5 +18,6 @@ export default {
 <style lang="scss" scoped>
   .top-nav{
     background: pink;
+    height: 40px;
   }
 </style>
