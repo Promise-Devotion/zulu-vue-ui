@@ -1,13 +1,13 @@
 <template>
   <div class="top-nav flex-box">
     <div>logo</div>
-    <ul>
+    <ul class="flex-box nav-contain">
       <li>菜单1</li>
       <li>菜单2</li>
     </ul>
   </div>
 </template>
-<script>
+<script lang="ts">
 export default {
   name: "TopNav",
   data() {
@@ -16,8 +16,17 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-  .top-nav{
-    background: pink;
-    height: 40px;
+.top-nav {
+  background: pink;
+  position: sticky;
+  // height: 40px;
+  padding: 10px 20px;
+  justify-content: space-between;
+  align-items: center;
+  .nav-contain {
+    li {
+      margin-right: 10px;
+    }
   }
+}
 </style>
