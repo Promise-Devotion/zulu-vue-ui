@@ -10,7 +10,7 @@ export default {
   },
   setup(props, context) {
     const toogle = () => {
-      context.emit("input", !props.value);
+      context.emit("update:value", !props.value);
     };
     return { toogle };
   },
@@ -26,21 +26,21 @@ button {
   background-color: #dcdfe6;
   border-radius: $h / 2;
   position: relative;
-}
-span {
-  position: absolute;
-  top: 2px;
-  left: 2px;
-  height: $h2;
-  width: $h2;
-  background: white;
-  border-radius: $h2 / 2;
-  transition: left 250ms;
-}
-.checked {
-  background: #409eff;
-}
-.checked > span {
-  left: calc(100% - #{$h2} - 2px);
+  > span {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    height: $h2;
+    width: $h2;
+    background: white;
+    border-radius: $h2 / 2;
+    transition: left 250ms;
+  }
+  &.checked {
+    background: #409eff;
+    > span {
+      left: calc(100% - #{$h2} - 2px);
+    }
+  }
 }
 </style>
