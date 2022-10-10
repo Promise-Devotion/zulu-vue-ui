@@ -96,5 +96,18 @@ $radius: 4px;
       font-size: 12px;
     }
   }
+  &.zulu-theme-link {
+    &.zulu-size-big {
+      font-size: 24px;
+      height: 40px;
+      padding: 12px 19px;
+    }
+    &.zulu-size-small {
+      font-size: 14px;
+      height: 24px;
+      padding: 5px 11px;
+      font-size: 12px;
+    }
+  }
 }
 </style>

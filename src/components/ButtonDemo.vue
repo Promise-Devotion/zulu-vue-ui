@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>button</p>
-    <h2>例子</h2>
+    <h2>例子 类型</h2>
     <div>
       <Button>你好</Button>
       <Button theme="button">你好</Button>
@@ -14,6 +14,13 @@
       <Button theme="button" size="normal">正正常</Button>
       <Button theme="button" size="normal">默默认</Button>
       <Button theme="button" size="small">小小小</Button>
+    </div>
+    <h2>例子2 link类型大小</h2>
+    <div>
+      <Button theme="link" size="big">大大大</Button>
+      <Button theme="link" size="normal">正正常</Button>
+      <Button theme="link" size="normal">默默认</Button>
+      <Button theme="link" size="small">小小小</Button>
     </div>
   </div>
 </template>
