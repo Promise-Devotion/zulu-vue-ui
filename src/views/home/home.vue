@@ -1,37 +1,37 @@
 <template>
   <div class="home-contain">
-    <h1>zulu-ui</h1>
-    <h2 @click="gotodetail">一个厉害的vue ui框架</h2>
-    <p class="zulu-actions">
-      <a href="https://github.com/Promise-Devotion/zulu-vue-ui" target="_blank"
-        >GitHub</a
-      >
-      <router-link to="/doc">开始</router-link>
-    </p>
+    <div>
+      <h1>zulu-ui</h1>
+      <h2>一个厉害的vue ui框架</h2>
+    </div>
+    <div>
+      <p class="zulu-actions">
+        <a
+          href="https://github.com/Promise-Devotion/zulu-vue-ui"
+          target="_blank"
+          >GitHub</a
+        >
+        <router-link to="/doc">开始</router-link>
+      </p>
+    </div>
   </div>
 </template>
 <script lang="ts">
-import { useRoute, useRouter } from "vue-router";
 export default {
   setup() {
-    const route = useRoute();
-    const router = useRouter();
     return {};
   },
   name: "Home",
   data() {
     return {};
   },
-  methods: {
-    gotodetail() {
-      router.push("/detail");
-    },
-  },
+  methods: {},
 };
 </script>
 <style lang="scss" scoped>
 .home-contain {
-  background: chartreuse;
+  // background: chartreuse; //留待备用
+  background-color: #d0ecf5;
   padding: 50px 0 50px 0;
   h1 {
     font-size: 30px;

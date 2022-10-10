@@ -1,6 +1,8 @@
 <template>
   <div class="top-nav flex-box">
-    <div>logo</div>
+    <router-link to="/">
+      <img class="logo" src="../assets/images/logo.png" alt="#d0ecf5" />
+    </router-link>
     <ul class="flex-box nav-contain">
       <li>菜单1</li>
       <li>菜单2</li>
@@ -17,12 +19,16 @@ export default {
 </script>
 <style lang="scss" scoped>
 .top-nav {
-  background: pink;
+  background: #d0ecf5;
   position: sticky;
   // height: 40px;
   padding: 10px 20px;
   justify-content: space-between;
   align-items: center;
+  .logo {
+    display: inline-block;
+    height: 20px;
+  }
   .nav-contain {
     li {
       margin-right: 10px;

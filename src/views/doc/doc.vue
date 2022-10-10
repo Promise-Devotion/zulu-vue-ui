@@ -32,11 +32,11 @@ export default {
 </script>
 <style lang="scss" scoped>
 aside {
-  background: rgb(119, 165, 196);
+  background: #d0ecf5;
   width: 200px;
   padding: 16px;
   position: fixed;
   left: 0;
-  top: 40px;
+  top: 60px;
 }
 </style>
