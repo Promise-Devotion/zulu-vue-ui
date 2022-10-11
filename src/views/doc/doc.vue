@@ -1,10 +1,10 @@
 <template>
-  <div class="content">
+  <div class="content flex-box">
     <aside>
-      <h2>组件列表</h2>
+      <h2 class="sidebar-group-title">Basic 基础组件</h2>
       <ol>
         <li>
-          <router-link to="/doc/switch">switch组件</router-link>
+          <router-link to="/doc/switch">switch开关</router-link>
         </li>
         <li>
           <router-link to="/doc/button">button组件</router-link>
@@ -17,7 +17,7 @@
         </li>
       </ol>
     </aside>
-    <div>
+    <div class="doc-contain">
       <router-view></router-view>
     </div>
   </div>
@@ -31,12 +31,40 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-aside {
-  background: #d0ecf5;
-  width: 200px;
-  padding: 16px;
-  position: fixed;
-  left: 0;
-  top: 60px;
+.content {
+  aside {
+    background: #d0ecf5;
+    width: 200px;
+    height: calc(100vh - 92px);
+    overflow-y: auto;
+    padding: 16px 0;
+    .sidebar-group-title {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 8px;
+      line-height: 24px;
+      text-align: left;
+      padding-left: 32px;
+    }
+    ol {
+      li {
+        text-align: left;
+        a {
+          display: block;
+          text-decoration: none;
+          padding: 10px 16px 10px 40px;
+          color: blue;
+        }
+        .router-link-exact-active {
+          background-color: white;
+          color: #000;
+        }
+      }
+    }
+  }
+  .doc-contain {
+    flex: 1;
+    padding: 64px 64px 42px;
+  }
 }
 </style>

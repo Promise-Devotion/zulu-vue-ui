@@ -1,9 +1,19 @@
-@import '../src/assets/css/reset.scss';
-@import '../src/assets/css/flex.scss';
+@import "../src/assets/css/reset.scss";
+@import "../src/assets/css/flex.scss";
 #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+  color: #606266;
+}
+h2 {
+  margin-top: 2.25rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.3rem;
+  line-height: 1.25;
+  font-size: 1.65rem;
 }

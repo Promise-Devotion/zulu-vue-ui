@@ -3,13 +3,6 @@
   <router-view></router-view>
 </template>
 
-<script>
-import TopNav from '../src/components/TopNav.vue'
-
-export default {
-  name: 'App',
-  components: {
-    TopNav
-  },
-}
+<script lang="ts" setup>
+  import TopNav from "../src/components/TopNav.vue";
 </script>
