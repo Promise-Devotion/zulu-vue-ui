@@ -21,8 +21,8 @@ export default {
 .top-nav {
   background: #d0ecf5;
   position: sticky;
-  // height: 40px;
-  padding: 10px 20px;
+  height: 60px;
+  padding: 0px 20px;
   justify-content: space-between;
   align-items: center;
   .logo {
