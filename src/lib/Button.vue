@@ -3,32 +3,26 @@
     <slot />
   </button>
 </template>
-<script lang="ts">
+<script lang="ts" setup>
 import { computed } from "vue";
-
-export default {
-  props: {
-    theme: {
-      type: String,
-      default: "button",
-    },
-    size: {
-      type: String,
-      default: "normal",
-    },
+const props = defineProps({
+  theme: {
+    type: String,
+    default: "button",
   },
-  setup(props) {
-    const { size, theme } = props;
-    const classes = computed(() => {
-      return {
-        [`zulu-size-${size}`]: size,
-        [`zulu-theme-${theme}`]: theme,
-      };
-    });
-
-    return { classes };
+  size: {
+    type: String,
+    default: "normal",
   },
-};
+});
+
+const { size, theme } = props;
+const classes = computed(() => {
+  return {
+    [`zulu-size-${size}`]: size,
+    [`zulu-theme-${theme}`]: theme,
+  };
+});
 </script>
 <style lang="scss">
 $h: 32px;

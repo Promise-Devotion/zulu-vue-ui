@@ -7,17 +7,14 @@
     <span></span>
   </button>
 </template>
-<script lang="ts">
-export default {
-  props: {
-    value: Boolean,
-  },
-  setup(props, context) {
-    const toogle = () => {
-      context.emit("update:value", !props.value);
-    };
-    return { toogle };
-  },
+<script lang="ts" setup>
+let emit = defineEmits(["update:value"]);
+const props = defineProps({
+  value: Boolean,
+});
+
+const toogle = (): void => {
+  emit("update:value", !props.value);
 };
 </script>
 <style lang="scss">
