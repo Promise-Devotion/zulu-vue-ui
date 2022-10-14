@@ -37,6 +37,34 @@ const router = createRouter({
       ],
     },
     {
+      path: "/introduction",
+      name: "Introduction",
+      redirect: { name: "Base" },
+      component: () => import("../views/Introduction/Introduction.vue"),
+      children: [
+        {
+          path: "base",
+          name: "Base",
+          component: () => import("../components/introduce/base.vue"),
+        },
+        {
+          path: "install",
+          name: "Install",
+          component: () => import("../components/introduce/Install.vue"),
+        },
+        {
+          path: "get-start",
+          name: "GetStart",
+          component: () => import("../components/introduce/GetStart.vue"),
+        },
+        {
+          path: "updatelog",
+          name: "Updatelog",
+          component: () => import("../components/introduce/UpdateLog.vue"),
+        },
+      ],
+    },
+    {
       path: "/detail",
       name: "Detail",
       component: () => import("../views/detail/detail.vue"),

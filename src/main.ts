@@ -2,6 +2,7 @@ import { createApp } from "vue";
 import "./lib/zulu.scss";
 import App from "./App.vue";
 import "./index.scss";
+import "github-markdown-css";
 
 import router from "./router/index";
 
