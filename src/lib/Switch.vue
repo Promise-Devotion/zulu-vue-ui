@@ -2,15 +2,23 @@
   <button
     @click="toogle"
     class="zulu-switch"
-    :class="{ 'zulu-checked': value }"
+    :class="{
+      'zulu-checked': value,
+      'zulu-disabled': disabled,
+    }"
+    :disabled="disabled"
   >
-    <span></span>
+    <span> </span>
   </button>
 </template>
 <script lang="ts" setup>
   let emit = defineEmits(["update:value"]);
   const props = defineProps({
     value: Boolean,
+    disabled: {
+      type: Boolean,
+      default: false,
+    },
   });
 
   const toogle = (): void => {
@@ -42,6 +50,9 @@
       > span {
         left: calc(100% - #{$h2} - 2px);
       }
+    }
+    &.zulu-disabled {
+      cursor: not-allowed;
     }
   }
 </style>

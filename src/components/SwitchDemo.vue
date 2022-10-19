@@ -5,11 +5,13 @@
     <h2>基础用法</h2>
     <p>绑定 v-model 到一个 Boolean 类型的变量。</p>
     <Switch v-model:value="y" />
+    <Switch v-model:value="x" disabled />
   </div>
 </template>
 <script lang="ts" setup>
   import { ref } from "vue";
   import Switch from "../lib/Switch.vue";
-  const y = ref(false);
+  const y = ref(true);
+  const x = ref(false);
 </script>
 <style lang="scss" scoped></style>
