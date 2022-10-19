@@ -25,9 +25,14 @@
 <script lang="ts" setup>
   import Tab from "./Tab.vue";
   import { computed, onMounted, ref, useSlots, watchEffect } from "vue";
-  const selectedItem = ref<HTMLDivElement>(null);
-  const indicator = ref<HTMLDivElement>(null);
-  const container = ref<HTMLDivElement>(null);
+  const props = defineProps({
+    selected: String,
+  });
+  const emit = defineEmits(["update:selected"]);
+  const slot = useSlots();
+  const selectedItem = ref<HTMLDivElement | null>(null);
+  const indicator = ref<HTMLDivElement | null>(null);
+  const container = ref<HTMLDivElement | null>(null);
   onMounted(() => {
     watchEffect(() => {
       const { width } = selectedItem.value.getBoundingClientRect();
@@ -38,11 +43,6 @@
       indicator.value.style.left = left + "px";
     });
   });
-  const emit = defineEmits(["update:selected"]);
-  const props = defineProps({
-    selected: String,
-  });
-  const slot = useSlots();
   const defaults = slot.default ? slot.default() : [];
   const current = computed(() => {
     return defaults.find(
