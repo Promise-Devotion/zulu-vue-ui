@@ -18,7 +18,10 @@
       <div class="gulu-tabs-nav-indicator" ref="indicator"></div>
     </div>
     <div class="gulu-tabs-content">
-      <component :is="current" :key="current.props.title" />
+      <component
+        :is="current"
+        :key="current && current.props && current.props.title"
+      />
     </div>
   </div>
 </template>
