@@ -12,6 +12,7 @@ const router = createRouter({
     {
       path: "/doc",
       name: "Doc",
+      redirect: { name: "SwitchDemo" },
       component: () => import("../views/doc/doc.vue"),
       children: [
         {
