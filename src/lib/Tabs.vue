@@ -38,7 +38,7 @@
   const container = ref<HTMLDivElement>(null);
   onMounted(() => {
     watchEffect(() => {
-      const { width } = selectedItem.value.getBoundingClientRect();
+      const { width } = selectedItem.value?.getBoundingClientRect();
       indicator.value.style.width = width + "px";
       const { left: left1 } = container.value.getBoundingClientRect();
       const { left: left2 } = selectedItem.value.getBoundingClientRect();
