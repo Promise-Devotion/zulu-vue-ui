@@ -35,6 +35,11 @@ const router = createRouter({
           name: "TabsDemo",
           component: () => import("../components/TabsDemo.vue"),
         },
+        {
+          path: "carousel",
+          name: "CarouselDemo",
+          component: () => import("../components/CarouselDemo.vue"),
+        },
       ],
     },
     {

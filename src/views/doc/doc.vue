@@ -15,6 +15,9 @@
         <li>
           <router-link to="/doc/tabs">tabs组件</router-link>
         </li>
+        <li>
+          <router-link to="/doc/carousel">Carousel组件</router-link>
+        </li>
       </ol>
     </aside>
     <div class="doc-contain">
