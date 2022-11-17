@@ -43,9 +43,7 @@
   .zulu-button {
     box-sizing: border-box;
     cursor: pointer;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
+
     height: $h;
     border-radius: $radius;
     padding: 0 12px;

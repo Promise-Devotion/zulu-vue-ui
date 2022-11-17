@@ -1,7 +1,8 @@
 <template>
   <div>
-    <h4>CarouselDemo</h4>
-    <Carousel :data="dataList" />
+    <h1 id="CarouselDemo" tabindex="-1">CarouselDemo</h1>
+    <p>A carousel component. Scales with its container.</p>
+    <Carousel :links="dataList" />
   </div>
 </template>
 <script setup lang="ts">

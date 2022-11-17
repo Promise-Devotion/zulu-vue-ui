@@ -6,4 +6,7 @@ export default defineConfig({
   base: "./",
   assetsDir: "assets",
   plugins: [vue()],
+  build: {
+		sourcemap: true
+  },
 });
