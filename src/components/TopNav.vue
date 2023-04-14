@@ -3,7 +3,7 @@
     <router-link to="/">
       <img class="logo" src="../assets/images/logo.png" alt="#d0ecf5" />
     </router-link>
-    <ul class="flex-box nav-contain">
+    <div class="flex-box nav-contain">
       <router-link to="/introduction">指南</router-link>
       <router-link to="/doc">组件</router-link>
       <div class="social-links" data-v-0baf1018="" data-v-76aa5200="">
@@ -29,7 +29,7 @@
               ></path></svg></i
         ></a>
       </div>
-    </ul>
+    </div>
   </div>
 </template>
 <script lang="ts">

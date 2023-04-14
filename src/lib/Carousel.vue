@@ -1,6 +1,6 @@
 <template>
   <div class="zulu-carousel">
-    <div
+    <ul
       class="zulu-carousel-contain"
       :style="{ width: links.length * 100 + 'px' }"
     >
@@ -22,7 +22,7 @@
         <img alt="" class="img" style="background: yellow" />
         <!-- :src="item.url" -->
       </li>
-    </div>
+    </ul>
     <div class="zulu-dot">
       <span
         v-for="(item, index) in links"
